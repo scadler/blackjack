@@ -22,3 +22,15 @@ $("#search-button").click(function(){
   
 });
 
+$("#search-button").click(function(){
+   $.ajax({
+    method: "GET",
+    success: function(response) {
+      var gifs = Math.floor(Math.random() * response.data.length);
+        $(".text-center").html("");
+        response.data.forEach(function(gifs){
+        $(".text-center").append("<img class='text-center' src='" + response.data[gifs].images.original.url + "'>" );
+        });
+        },
+});
+});
