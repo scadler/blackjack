@@ -42,7 +42,7 @@ $("#search-button").click(function(){
 $("#random").click(function(){
   var inputCond = $("#search-term").val();
   if(inputCond === ""){
-    var input = "https://api.giphy.com/v1/gifs/search?q=" + "random" + "&rating=pg&api_key=dc6zaTOxFJmzC";
+    var input = "https://api.giphy.com/v1/gifs/search?q=" + "hi" + "&rating=pg&api_key=dc6zaTOxFJmzC";
     console.log(input);
     $.ajax({
      url: input,
