@@ -7,6 +7,7 @@ $("#aceFlipB").hide();
 $("#aceFlipC").hide();
 $("#aceFlipD").hide();
 $("#deal").click(function(){
+    $("#userAlert").text("");
     var counterA = 1;
     var counterB = 1;
     var counterC = 1;
@@ -41,12 +42,11 @@ $("#deal").click(function(){
     //hit
     
     $("#hit").click(function(){
+        if(counterHit === 1)
         cardC = 0;
         cardD = 0;
         counterHit = counterHit+1;
-        if(counterHit % 2 === 0 && counterHit < 3){
-            cardC = 0;
-            cardD = 0;
+        if(counterHit % 2 === 0 && counterHit <= 3){
             $("#aceFlipC").hide();
             var cardC = Math.ceil(Math.random(1)*13);
             console.log(cardC);
@@ -61,8 +61,7 @@ $("#deal").click(function(){
             $("#userScore").text(cardA + cardB + cardC + cardD);
         }
         //hit 2
-        else if(counterHit % 2 === 1  && counterHit < 3){
-            cardD = 0;
+        else if(counterHit % 2 === 1  && counterHit <= 3){
             console.log("worksB");
             $("#aceFlipD").hide();
             var cardD = Math.ceil(Math.random(1)*13);
@@ -77,8 +76,8 @@ $("#deal").click(function(){
             $("#compScore").text(aces);
             $("#userScore").text(cardA + cardB + cardC + cardD);
         }
-        if(counterHit >= 3){
-            
+        if(counterHit > 3){
+            $("#userAlert").text("(You can draw no more cards)");
         }
     });
     
@@ -123,8 +122,15 @@ $("#deal").click(function(){
             cardD=1;
         }
         $("#userScore").text(cardA + cardB + cardC + cardD);
+        console.log("cardA is " +cardA);
+        console.log("cardB is " +cardB);
+        console.log("cardC is " +cardC);
+        console.log("cardD is " +cardD);
     });
-    
+    console.log("cardA is " +cardA);
+    console.log("cardB is " +cardB);
+    console.log("cardC is " +cardC);
+    console.log("cardD is " +cardD);
     //user score
     
     $("#compScore").text(aces);
