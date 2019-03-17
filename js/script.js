@@ -13,5 +13,12 @@ setInterval(function(){
     var green = $("#inputGreen").val();
     var greenHex = parseInt(green, 10).toString(16);
     console.log(redHex);
-    $("body").css("background-color", "#" + redHex + greenHex + blueHex );   
+    $("body").css("background-color", "#" + redHex + greenHex + blueHex ); 
+    $("#redTen").text(red);
+    $("#redHex").text(redHex);
+    $("#blueTen").text(blue);
+    $("#blueHex").text(blueHex);
+    $("#greenTen").text(green);
+    $("#greenHex").text(greenHex);
+    $("#color").text("#"+redHex+greenHex+blueHex);
 }, 15);
