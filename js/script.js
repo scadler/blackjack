@@ -20,6 +20,7 @@ $("#deal").click(function(){
     var cardB = 0;
     var cardC = 0;
     var cardD = 0;
+    var hand = 0;
     var aces = 0;
     $("#aceFlipA").hide();
     $("#aceFlipB").hide();
@@ -65,11 +66,48 @@ $("#deal").click(function(){
                 $("#aceFlipC").show();
                 aces = aces+1;
             }
+            
+        
+        
+            $("#aceFlipA").click(function(){
+                counterA=counterA+1;
+                if( counterA % 2 === 0){
+                    cardA=11;
+                }
+                else if( counterA % 2 === 1){
+                    cardA=1;
+                }
+                hand=cardA+cardB+cardC;
+                $("#userScore").text(hand);
+            });
+            $("#aceFlipB").click(function(){
+                counterB=counterB+1;
+                if( counterB % 2 === 0){
+                    cardB=11;
+                }
+                else if( counterB % 2 === 1){
+                    cardB=1;
+                }
+                hand=cardA+cardB+cardC;
+                $("#userScore").text(hand);
+            });
+            $("#aceFlipC").click(function(){
+               counterC=counterC+1;
+                if( counterC % 2 === 0){
+                    cardC=11;
+                }
+                else if( counterC % 2 === 1){
+                    cardC=1;
+                }
+                hand=cardA+cardB+cardC;
+                $("#userScore").text(hand);
+            });
+            
             $("#compScore").text(aces);
             $("#userScore").text(cardA + cardB + cardC);
         }
-        //hit 2
-        if(counterHit % 2 === 1  && counterHit === 3){
+        $("#hit").click(function(){
+            if(counterHit % 2 === 1  && counterHit === 3){
             cardsDrawn=4;
             $("#cardNum").text(cardsDrawn);
             cardD=0;
@@ -89,17 +127,63 @@ $("#deal").click(function(){
                $("#aceFlipD").show();
                 aces = aces+1;
             }
+            
+            
+            $("#aceFlipA").click(function(){
+                counterA=counterA+1;
+                if( counterA % 2 === 0){
+                    cardA=11;
+                }
+                else if( counterA % 2 === 1){
+                    cardA=1;
+                }
+                hand=cardA+cardB+cardC+cardD;
+                $("#userScore").text(hand);
+            });
+            $("#aceFlipB").click(function(){
+                counterB=counterB+1;
+                if( counterB % 2 === 0){
+                    cardB=11;
+                }
+                else if( counterB % 2 === 1){
+                    cardB=1;
+                }
+                hand=cardA+cardB+cardC+cardD;
+                $("#userScore").text(hand);
+            });
+            $("#aceFlipC").click(function(){
+               counterC=counterC+1;
+                if( counterC % 2 === 0){
+                $("#userScore").text(hand);
+                }
+                else if( counterC % 2 === 1){
+                    cardC=1;
+                }
+                hand=cardA+cardB+cardC+cardD;
+                $("#userScore").text(hand);
+            });
+            $("#aceFlipD").click(function(){
+                counterD=counterD+1;
+                if( counterD % 2 === 0){
+                    cardD=11;
+                }
+                else if( counterD % 2 === 1){
+                    cardD=1;
+                }
+                hand=cardA+cardB+cardC+cardD;
+                $("#userScore").text(hand);
+            });
+            
             $("#compScore").text(aces);
             $("#userScore").text(cardA + cardB + cardC + cardD);
         }
-        if(counterHit > 3){
-            $("#userAlert").text("(You can draw no more cards)");
-        }
+    });
     });
     
     //ace flip
     //think code doesnt know what c and d are here, reason not working
     $("#aceFlipA").click(function(){
+        if(counterHit === 1){
         counterA=counterA+1;
         if( counterA % 2 === 0){
             cardA=11;
@@ -107,9 +191,12 @@ $("#deal").click(function(){
         else if( counterA % 2 === 1){
             cardA=1;
         }
-        $("#userScore").text(cardA + cardB + cardC + cardD);
+        hand=cardA+cardB;
+        $("#userScore").text(hand);
+        }
     });
     $("#aceFlipB").click(function(){
+        if(counterHit === 1){
         counterB=counterB+1;
         if( counterB % 2 === 0){
             cardB=11;
@@ -117,32 +204,16 @@ $("#deal").click(function(){
         else if( counterB % 2 === 1){
             cardB=1;
         }
-        $("#userScore").text(cardA + cardB + cardC  + cardD);
+        hand=cardA+cardB;
+        $("#userScore").text(hand);
+        }
     });
-    $("#aceFlipC").click(function(){
-        counterC=counterC+1;
-        if( counterC % 2 === 0){
-            cardC=11;
-        }
-        else if( counterC % 2 === 1){
-            cardC=1;
-        }
-        $("#userScore").text(cardA + cardB + cardC  + cardD);
-    });
-    $("#aceFlipD").click(function(){
-        counterD=counterD+1;
-        if( counterD % 2 === 0){
-            cardD=11;
-        }
-        else if( counterD % 2 === 1){
-            cardD=1;
-        }
+    
         $("#userScore").text(cardA + cardB + cardC + cardD);
         console.log("cardA is " +cardA);
         console.log("cardB is " +cardB);
         console.log("cardC is " +cardC);
         console.log("cardD is " +cardD);
-    });
     console.log("cardA is " +cardA);
     console.log("cardB is " +cardB);
     console.log("cardC is " +cardC);
@@ -150,7 +221,8 @@ $("#deal").click(function(){
     //user score
     
     $("#compScore").text(aces);
-    $("#userScore").text(cardA + cardB);
+    hand=cardA+cardB;
+    $("#userScore").text(hand);
     console.log(cardC);
     console.log(cardD);
 });
