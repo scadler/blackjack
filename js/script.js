@@ -3,3 +3,6 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 /* global $ */
 
+setInterval(function(){ 
+    //code goes here that will be run every 5 seconds.    
+}, 50);
