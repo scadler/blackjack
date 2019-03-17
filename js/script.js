@@ -6,6 +6,8 @@ $("#aceFlipA").hide();
 $("#aceFlipB").hide();
 $("#aceFlipC").hide();
 $("#aceFlipD").hide();
+var compCard = 0;
+var compDraw = true;
 var cardsDrawn=0;
 $("#deal").click(function(){
     cardsDrawn=2;
@@ -110,7 +112,6 @@ $("#deal").click(function(){
                 }
             });
             
-            $("#compScore").text(aces);
             $("#userScore").text(cardA + cardB + cardC);
         }
         $("#hit").click(function(){
@@ -182,8 +183,6 @@ $("#deal").click(function(){
                 hand=cardA+cardB+cardC+cardD;
                 $("#userScore").text(hand);
             });
-            
-            $("#compScore").text(aces);
             $("#userScore").text(cardA + cardB + cardC + cardD);
         }
     });
@@ -228,10 +227,20 @@ $("#deal").click(function(){
     console.log("cardC is " +cardC);
     console.log("cardD is " +cardD);
     //user score
-    
-    $("#compScore").text(aces);
     hand=cardA+cardB;
     $("#userScore").text(hand);
     console.log(cardC);
     console.log(cardD);
+});
+
+$("#stand").click(function(){
+    if(compDraw === true){
+        var num = 0;
+        while(compCard < 17){
+        num = Math.ceil(Math.random(1)*13);
+        compCard = compCard+num;
+        }
+    $("#compScore").text(compCard);
+    }
+    compDraw = false;
 });
