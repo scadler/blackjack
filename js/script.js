@@ -22,6 +22,7 @@ $("#deal").click(function(){
     var cardD = 0;
     var hand = 0;
     var aces = 0;
+    var hitTwo = false;
     $("#aceFlipA").hide();
     $("#aceFlipB").hide();
     $("#aceFlipC").hide();
@@ -70,6 +71,7 @@ $("#deal").click(function(){
         
         
             $("#aceFlipA").click(function(){
+                if(hitTwo === false){
                 counterA=counterA+1;
                 if( counterA % 2 === 0){
                     cardA=11;
@@ -79,8 +81,10 @@ $("#deal").click(function(){
                 }
                 hand=cardA+cardB+cardC;
                 $("#userScore").text(hand);
+                }
             });
             $("#aceFlipB").click(function(){
+                if(hitTwo === false){
                 counterB=counterB+1;
                 if( counterB % 2 === 0){
                     cardB=11;
@@ -90,8 +94,10 @@ $("#deal").click(function(){
                 }
                 hand=cardA+cardB+cardC;
                 $("#userScore").text(hand);
+                }
             });
             $("#aceFlipC").click(function(){
+                if(hitTwo === false){
                counterC=counterC+1;
                 if( counterC % 2 === 0){
                     cardC=11;
@@ -101,12 +107,14 @@ $("#deal").click(function(){
                 }
                 hand=cardA+cardB+cardC;
                 $("#userScore").text(hand);
+                }
             });
             
             $("#compScore").text(aces);
             $("#userScore").text(cardA + cardB + cardC);
         }
         $("#hit").click(function(){
+            hitTwo=true;
             if(counterHit % 2 === 1  && counterHit === 3){
             cardsDrawn=4;
             $("#cardNum").text(cardsDrawn);
@@ -152,9 +160,10 @@ $("#deal").click(function(){
                 $("#userScore").text(hand);
             });
             $("#aceFlipC").click(function(){
+            console.log("C");
                counterC=counterC+1;
                 if( counterC % 2 === 0){
-                $("#userScore").text(hand);
+                    cardC=11;
                 }
                 else if( counterC % 2 === 1){
                     cardC=1;
