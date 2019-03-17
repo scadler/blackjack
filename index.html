@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            Hexdec Color Finder
+Blackjack
         </title>
 
         <!-- Latest compiled and minified CSS -->
@@ -10,19 +10,16 @@
         <link type="text/css" rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <p id="output">From top down the sliders are red green blue. Min=16 (10), Max=255 (FF)
-        R=<span id="redTen"></span> (<span id="redHex"></span>)
-        G=<span id="greenTen"></span> (<span id="greenHex"></span>)
-        B=<span id="bluTen"></span> (<span id="blueHex"></span>)</p>
-        Color=<span id="color"></span>
-        <p>
-            <input type="range" min="16" max="255" id="inputRed">
+        <p id="comp">
+           Computer Score: <span id="compScore">0</span>
         </p>
-        <p>
-            <input type="range" min="16" max="255" id="inputGreen">
+        <p id="user">
+           User Score: <span id="userScore">0</span>
         </p>
-        <p>
-            <input type="range" min="16" max="255" id="inputBlue">
+        <p id="buttons">
+            <button id="deal">Deal</button>
+            <button id="hit">Hit</button>
+            <button id="stand">Stand</button>
         </p>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
