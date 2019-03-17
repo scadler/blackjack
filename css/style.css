@@ -1,4 +1,7 @@
 input{
     height:150px;
-    width:150px;
+    width:512px;
+}
+#inputRed{
+ background-color:red;   
 }
