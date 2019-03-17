@@ -4,5 +4,6 @@
 /* global $ */
 
 setInterval(function(){ 
-    //code goes here that will be run every 5 seconds.    
+    var red = 
+    $("body").css("background-color", "#" + red + blue + green )   
 }, 50);
