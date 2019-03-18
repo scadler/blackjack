@@ -10,21 +10,21 @@
         <link type="text/css" rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <p id="top">To start, click deal. To draw additional cards, click hit. To end your turn, click stand. Only four cards can be drawn.
+        <p id="top"><font color="000000" id="info">To start, click deal. To draw additional cards, click hit. To end your turn, click stand. Only four cards can be drawn.
        The player closest to 21 points without having more than 21 points wins. In a tie computer wins. Aces can be worth 1 or 11 points.
-        <p id="comp">
-           <font color="#595959">Computer Score: <span id="compScore">0</span></font>
+        </font><p id="comp">
+           <font color="#595959" class="score">Computer Score: <span id="compScore">0</span></font>
         </p>
         <p id="user">
-            <font color="#595959">User Score: <span id="userScore">0</span></font>
+            <font color="#595959" class="score">User Score: <span id="userScore">0</span></font>
 
-               <button id="aceFlipA" class="aces">Flip Ace A</button>
-               <button id="aceFlipB" class="aces">Flip Ace B</button>
-               <button id="aceFlipC" class="aces">Flip Ace C</button>
-               <button id="aceFlipD" class="aces">Flip Ace D</button>
+               <button id="aceFlipA" class="acesBlack, aces">Flip Ace of Spades</button>
+               <button id="aceFlipB" class="acesRed, aces">Flip Ace of Hearts</button>
+               <button id="aceFlipC" class="acesBlack, aces">Flip Ace of Clubs</button>
+               <button id="aceFlipD" class="acesRed, aces">Flip Ace od Diamonds</button>
         </p>
         <p>
-           <font color="000000"> Cards drawn: <span id="cardNum">0</span> </font>
+           <font color="000000" id="drawn"> Cards drawn: <span id="cardNum">0</span> </font>
         </p>
         <p>
     <!--      Winner: <span id="winner"></span> -->
@@ -33,6 +33,10 @@
             <button id="deal" class="buttons">Deal</button>
             <button id="hit" class="buttons">Hit</button>
             <button id="stand" class="buttons">Stand</button>
+        </p>
+        <p id="buttonsBottom">
+            <button id="light" class="lightButtons">Light Theme</button>
+            <button id="dark" class="lightButtons">Dark Theme</button>
         </p>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

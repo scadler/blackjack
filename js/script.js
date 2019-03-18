@@ -337,3 +337,24 @@ $("#deal").click(function(){
 }
 });
 });
+$("#dark").click(function(){
+    $(".score").css("color", "#f9f9f9");
+    $("body").css("background-color", "#444444");
+    $("#drawn").css("color", "#a9a9a9");
+    $("#info").css("color", "#a9a9a9");
+    $("#top").css("border-color", "#888888");
+    $(".aces").css("background-color", "#a9a9a9");
+    $(".buttons").css("background-color", "#a9a9a9");
+    $(".lightButtons").css("color", "#aaaaaa");
+});
+$("#light").click(function(){
+    $(".score").css("color", "#595959");
+    $("body").css("background-color", "#f9f9f9");
+    $("#drawn").css("color", "#000000");
+    $("#info").css("color", "#000000");
+    $("#top").css("border-color", "#ff9999");
+    $(".aces").css("background-color", "#f2f2f2");
+    $(".buttons").css("background-color", "#f2f2f2");
+    $(".lightButtons").css("background-color", "#f2f2f2");
+    $(".lightButtons").css("color", "#777777");
+});
