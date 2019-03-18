@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-Blackjack
+            Blackjack
         </title>
 
         <!-- Latest compiled and minified CSS -->
@@ -10,27 +10,29 @@ Blackjack
         <link type="text/css" rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <p id="top">Only four cards can be drawn</p>
+        <p id="top">To start, click deal. To draw additional cards, click hit. To end your turn, click stand. Only four cards can be drawn.
+       The player closest to 21 points without having more than 21 points wins. In a tie computer wins. Aces can be worth 1 or 11 points.
         <p id="comp">
-           Computer Score: <span id="compScore">0</span>
+           <font color="#595959">Computer Score: <span id="compScore">0</span></font>
         </p>
         <p id="user">
-           User Score: <span id="userScore">0</span>
-           <button id="aceFlipA">Flip Ace A</button>
-           <button id="aceFlipB">Flip Ace B</button>
-           <button id="aceFlipC">Flip Ace C</button>
-           <button id="aceFlipD">Flip Ace D</button>
+            <font color="#595959">User Score: <span id="userScore">0</span></font>
+
+               <button id="aceFlipA" class="aces">Flip Ace A</button>
+               <button id="aceFlipB" class="aces">Flip Ace B</button>
+               <button id="aceFlipC" class="aces">Flip Ace C</button>
+               <button id="aceFlipD" class="aces">Flip Ace D</button>
         </p>
         <p>
-           Cards drawn: <span id="cardNum">0</span>
+           <font color="000000"> Cards drawn: <span id="cardNum">0</span> </font>
         </p>
         <p>
     <!--      Winner: <span id="winner"></span> -->
         </p>
         <p id="buttons">
-            <button id="deal">Deal</button>
-            <button id="hit">Hit</button>
-            <button id="stand">Stand</button>
+            <button id="deal" class="buttons">Deal</button>
+            <button id="hit" class="buttons">Hit</button>
+            <button id="stand" class="buttons">Stand</button>
         </p>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

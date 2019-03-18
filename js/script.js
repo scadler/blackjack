@@ -12,6 +12,7 @@ var cardsDrawn = 0;
 var gameOver = false;
 $("#compScore").text(0);
 $("#deal").click(function(){
+    $("#aceFlipD").hide();
     var compDraw = true;
     $("#compScore").text(0);
     cardsDrawn=2;
@@ -52,6 +53,7 @@ $("#deal").click(function(){
     //hit
     
     $("#hit").click(function(){
+        $("#aceFlipD").hide();
         cardC=0;
         cardD=0;
         counterHit = counterHit+1;
@@ -132,7 +134,7 @@ $("#deal").click(function(){
                     }
                 }
             }
-  //              compDraw = false;
+                compDraw = false;
     //            hand = cardA+cardB+cardC;
       //          console.log(hand);
         //        if(hand < 22 && compCard < 22){
@@ -235,7 +237,7 @@ $("#deal").click(function(){
                     $("#compScore").text(compCard);
                     }
     //                hand = $("#userScore").val();
-      //          compDraw = false;
+                    compDraw = false;
         //        if(hand < 22 && compCard < 22){
           //              if(hand > compCard){
             //                $("#winner").text("User");
@@ -295,11 +297,14 @@ $("#deal").click(function(){
     console.log("cardB is " +cardB);
     console.log("cardC is " +cardC);
     console.log("cardD is " +cardD);
+    
     //user score
+    
     hand=cardA+cardB;
     $("#userScore").text(hand);
-    console.log(cardC);
-    console.log(cardD);
+    
+    //computer logic
+    
     $("#stand").click(function(){
         console.log("stand");
             if(gameOver === false){
@@ -312,7 +317,7 @@ $("#deal").click(function(){
                             }
                     $("#compScore").text(compCard);
                     }
-//               compDraw = false;
+                compDraw = false;
 //                if(hand < 22 && compCard < 22){
 //                       if(hand > compCard){
 //                            $("#winner").text("User");
