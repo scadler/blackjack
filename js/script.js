@@ -8,13 +8,15 @@ $("#aceFlipC").hide();
 $("#aceFlipD").hide();
 var compCard = 0;
 var compDraw = true;
-var cardsDrawn=0;
+var cardsDrawn = 0;
+var gameOver = false;
 $("#compScore").text(0);
 $("#deal").click(function(){
+    var compDraw = true;
     $("#compScore").text(0);
     cardsDrawn=2;
     $("#cardNum").text(cardsDrawn);
-    $("#userAlert").text("");
+    $("#winner").text("");
     var counterA = 1;
     var counterB = 1;
     var counterC = 1;
@@ -118,19 +120,37 @@ $("#deal").click(function(){
         }
         $("#stand").click(function(){
             if(hitTwo === false){
+                if(gameOver === false){
                 if(compDraw === true){
                     var num = 0;
-                        while(compCard < 17){
+                    compCard = 0;
+                        while(compCard < 15){
                             num = Math.ceil(Math.random(1)*13);
                             compCard = compCard+num;
                             }
                     $("#compScore").text(compCard);
                     }
-                compDraw = false;
-                if(hand < 22){
-        
                 }
             }
+  //              compDraw = false;
+    //            hand = cardA+cardB+cardC;
+      //          console.log(hand);
+        //        if(hand < 22 && compCard < 22){
+          //              if(hand > compCard){
+            //                $("#winner").text("User");
+              //          }  
+                //        if(hand < compCard){
+                  //          $("#winner").text("Computer");
+                    //    }  
+//                }
+  //              if(compCard >= 22 && hand < 22){
+    //                $("#winner").text("User");
+      //          }
+        //        else{
+          //          $("#winner").text("Computer");
+            //    }
+//            }
+  //          }
 });
         $("#hit").click(function(){
             hitTwo=true;
@@ -204,18 +224,33 @@ $("#deal").click(function(){
             $("#userScore").text(cardA + cardB + cardC + cardD);
             $("#stand").click(function(){
             if(hitTwo === true){
+                if(gameOver === false){
                 if(compDraw === true){
                     var num = 0;
-                        while(compCard < 17){
+                    compCard = 0;
+                        while(compCard < 15){
                             num = Math.ceil(Math.random(1)*13);
                             compCard = compCard+num;
                             }
                     $("#compScore").text(compCard);
                     }
-                compDraw = false;
-                if(hand < 22){
-        
-                }
+    //                hand = $("#userScore").val();
+      //          compDraw = false;
+        //        if(hand < 22 && compCard < 22){
+          //              if(hand > compCard){
+            //                $("#winner").text("User");
+              //          }  
+                //        if(hand < compCard){
+                  //          $("#winner").text("Computer");
+                    //    }  
+//                }
+  //              if(compCard >= 22 && hand < 22){
+    //                $("#winner").text("User");
+      //          }
+        //        else{
+          //          $("#winner").text("Computer");
+            //    }
+               }
             }
             });
             }
@@ -265,5 +300,35 @@ $("#deal").click(function(){
     $("#userScore").text(hand);
     console.log(cardC);
     console.log(cardD);
+    $("#stand").click(function(){
+        console.log("stand");
+            if(gameOver === false){
+                if(compDraw === true){
+                    var num = 0;
+                   compCard = 0;
+                        while(compCard < 15){
+                         num = Math.ceil(Math.random(1)*13);
+                            compCard = compCard+num;
+                            }
+                    $("#compScore").text(compCard);
+                    }
+//               compDraw = false;
+//                if(hand < 22 && compCard < 22){
+//                       if(hand > compCard){
+//                            $("#winner").text("User");
+//                        }  
+//                        if(hand < compCard){
+//                            $("#winner").text("Computer");
+//                        }  
+//                }
+//                if(compCard >= 22 && hand < 22){
+//                    $("#winner").text("User");
+//                }
+//                else{
+//                    $("#winner").text("Computer");
+//                }
+//}
+//});
+}
 });
-
+});
