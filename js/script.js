@@ -9,7 +9,9 @@ $("#aceFlipD").hide();
 var compCard = 0;
 var compDraw = true;
 var cardsDrawn=0;
+$("#compScore").text(0);
 $("#deal").click(function(){
+    $("#compScore").text(0);
     cardsDrawn=2;
     $("#cardNum").text(cardsDrawn);
     $("#userAlert").text("");
@@ -111,9 +113,25 @@ $("#deal").click(function(){
                 $("#userScore").text(hand);
                 }
             });
-            
+            $("#aceFlipD").hide(); 
             $("#userScore").text(cardA + cardB + cardC);
         }
+        $("#stand").click(function(){
+            if(hitTwo === false){
+                if(compDraw === true){
+                    var num = 0;
+                        while(compCard < 17){
+                            num = Math.ceil(Math.random(1)*13);
+                            compCard = compCard+num;
+                            }
+                    $("#compScore").text(compCard);
+                    }
+                compDraw = false;
+                if(hand < 22){
+        
+                }
+            }
+});
         $("#hit").click(function(){
             hitTwo=true;
             if(counterHit % 2 === 1  && counterHit === 3){
@@ -184,7 +202,23 @@ $("#deal").click(function(){
                 $("#userScore").text(hand);
             });
             $("#userScore").text(cardA + cardB + cardC + cardD);
-        }
+            $("#stand").click(function(){
+            if(hitTwo === true){
+                if(compDraw === true){
+                    var num = 0;
+                        while(compCard < 17){
+                            num = Math.ceil(Math.random(1)*13);
+                            compCard = compCard+num;
+                            }
+                    $("#compScore").text(compCard);
+                    }
+                compDraw = false;
+                if(hand < 22){
+        
+                }
+            }
+            });
+            }
     });
     });
     
@@ -233,14 +267,3 @@ $("#deal").click(function(){
     console.log(cardD);
 });
 
-$("#stand").click(function(){
-    if(compDraw === true){
-        var num = 0;
-        while(compCard < 17){
-        num = Math.ceil(Math.random(1)*13);
-        compCard = compCard+num;
-        }
-    $("#compScore").text(compCard);
-    }
-    compDraw = false;
-});
