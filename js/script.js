@@ -30,6 +30,7 @@ $("#deal").click(function(){
     var hand = 0;
     var aces = 0;
     var hitTwo = false;
+    var bust = false;
     $("#aceFlipA").hide();
     $("#aceFlipB").hide();
     $("#aceFlipC").hide();
@@ -193,7 +194,12 @@ $("#deal").click(function(){
 //            }
   //          }
 });
+    if(cardA+cardB+cardC > 21){
+        $("#userScore").text(cardA+cardB+cardC +" Bust!")
+        bust = true;
+    }
         $("#hit").click(function(){
+            if(bust === false){
             hitTwo=true;
             if(counterHit % 2 === 1  && counterHit === 3){
             cardsDrawn=4;
@@ -302,8 +308,12 @@ $("#deal").click(function(){
                 $("#userScore").text(hand);
             });
             $("#userScore").text(cardA + cardB + cardC + cardD);
+            if(cardA+cardB+cardC+cardD > 21){
+                $("#userScore").text(cardA+cardB+cardC +" Bust!");
+                bust=true;
+            }
             $("#stand").click(function(){
-            if(hitTwo === true){
+            if(hitTwo === true && bust === false){
                 if(gameOver === false){
                 if(compDraw === true){
                     var num = 0;
@@ -334,7 +344,9 @@ $("#deal").click(function(){
             }
             });
             }
+    }
     });
+
     });
     
     //ace flip
@@ -508,9 +520,11 @@ $("#dark").click(function(){
     $("#drawn").css("color", "#a9a9a9");
     $("#info").css("color", "#a9a9a9");
     $("#top").css("border-color", "#888888");
-    $(".aces").css("background-color", "#a9a9a9");
+    $(".acesRed").css("background-color", "#a9a9a9");
+    $(".acesBlack").css("background-color", "#a9a9a9");
     $(".buttons").css("background-color", "#a9a9a9");
     $(".lightButtons").css("color", "#aaaaaa");
+    $("#userHandFont").css("color", "#bbbbbb");
 });
 $("#light").click(function(){
     $(".score").css("color", "#595959");
@@ -518,8 +532,10 @@ $("#light").click(function(){
     $("#drawn").css("color", "#000000");
     $("#info").css("color", "#000000");
     $("#top").css("border-color", "#ff9999");
-    $(".aces").css("background-color", "#f2f2f2");
+    $(".acesRed").css("background-color", "#f2f2f2");
+    $(".acesBlack").css("background-color", "#f2f2f2");
     $(".buttons").css("background-color", "#f2f2f2");
     $(".lightButtons").css("background-color", "#f2f2f2");
     $(".lightButtons").css("color", "#777777");
+    $("#userHandFont").css("color", "#000000");
 });
