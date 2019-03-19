@@ -170,7 +170,12 @@ $("#deal").click(function(){
                             num = Math.ceil(Math.random(1)*13);
                             compCard = compCard+num;
                             }
+                    if(compCard <= 21){
                     $("#compScore").text(compCard);
+                    }
+                    if(compCard > 21){
+                    $("#compScore").text(compCard +" Bust!");
+                    }
                     }
                 }
             }
@@ -309,7 +314,7 @@ $("#deal").click(function(){
             });
             $("#userScore").text(cardA + cardB + cardC + cardD);
             if(cardA+cardB+cardC+cardD > 21){
-                $("#userScore").text(cardA+cardB+cardC +" Bust!");
+                $("#userScore").text(cardA+cardB+cardC+cardD +" Bust!");
                 bust=true;
             }
             $("#stand").click(function(){
@@ -322,7 +327,12 @@ $("#deal").click(function(){
                             num = Math.ceil(Math.random(1)*13);
                             compCard = compCard+num;
                             }
+                    if(compCard <= 21){
                     $("#compScore").text(compCard);
+                    }
+                    if(compCard > 21){
+                    $("#compScore").text(compCard +" Bust!");
+                    }
                     }
     //                hand = $("#userScore").val();
                     compDraw = false;
@@ -383,10 +393,6 @@ $("#deal").click(function(){
         console.log("cardB is " +cardB);
         console.log("cardC is " +cardC);
         console.log("cardD is " +cardD);
-    console.log("cardA is " +cardA);
-    console.log("cardB is " +cardB);
-    console.log("cardC is " +cardC);
-    console.log("cardD is " +cardD);
     
     //user score
     
@@ -405,7 +411,12 @@ $("#deal").click(function(){
                          num = Math.ceil(Math.random(1)*13);
                             compCard = compCard+num;
                             }
+                    if(compCard <= 21){
                     $("#compScore").text(compCard);
+                    }
+                    if(compCard > 21){
+                    $("#compScore").text(compCard +" Bust!");
+                    }
                     }
                 compDraw = false;
 //                if(hand < 22 && compCard < 22){
