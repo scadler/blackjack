@@ -265,7 +265,7 @@ $("#deal").click(function(){
                 else if(cardD === 13){
                     faceD = "King of Diamonds";
                 } 
-                $("#userHand").text(faceA +", "+ faceB +", "+ faceC +", "+ faceD);
+                $("#userHand").text(faceA+", "+faceB+", "+faceC+", "+faceD);
             
             $("#aceFlipA").click(function(){
                 counterA=counterA+1;
