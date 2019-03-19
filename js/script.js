@@ -79,28 +79,28 @@ $("#deal").click(function(){
                     faceC = "Ace of Clubs";
                 }
                 else if(cardC === 2){
-                    faceC = "Two of Clubs";
+                    faceC = "Two of Diamonds";
                 }
                 else if(cardC === 3){
-                    faceC = "Three of Clubs";
+                    faceC = "Three of Diamonds";
                 }
                 else if(cardC === 4){
-                    faceC = "Four of Clubs";
+                    faceC = "Four of Diamonds";
                 }
                 else if(cardC === 5){
-                    faceC = "Five of Clubs";
+                    faceC = "Five of Diamonds";
                 }
                 else if(cardC === 6){
-                    faceC = "Six of Clubs";
+                    faceC = "Six of Spades";
                 }
                 else if(cardC === 7){
                     faceC = "Seven of Clubs";
                 }
                 else if(cardC === 8){
-                   faceC = "Eight of Clubs";
+                   faceC = "Eight of Spades";
                 }
                 else if(cardC === 9){
-                    faceC = "Nine of Clubs";
+                    faceC = "Nine of Spades";
                 }
                 else if(cardC === 10){
                     faceC = "Ten of Clubs";
@@ -109,10 +109,10 @@ $("#deal").click(function(){
                     faceC = "Jack of Clubs";
                 }
                 else if(cardC === 12){
-                    faceC = "Queen of Clubs";
+                    faceC = "Queen of Hearts";
                 }
                 else if(cardC === 13){
-                    faceC = "King ofClubs";
+                    faceC = "King of Hearts";
                 } 
                 $("#userHand").text(faceA +", "+ faceB +", "+ faceC);
         
@@ -216,19 +216,19 @@ $("#deal").click(function(){
                 aces = aces+1;
             }
             if(cardD === 1){
-                    faceD = "Ace of Diamonds";
+                    faceD = "Ace of Clubs";
                 }
                 else if(cardD === 2){
-                    faceD = "Two of Diamonds";
+                    faceD = "Two of Spades";
                 }
                 else if(cardD === 3){
-                    faceD = "Three of Diamonds";
+                    faceD = "Three of Clubs";
                 }
                 else if(cardD === 4){
-                    faceD = "Four of Diamonds";
+                    faceD = "Four of Clubs";
                 }
                 else if(cardD === 5){
-                    faceD = "Five of Diamonds";
+                    faceD = "Five of Spades";
                 }
                 else if(cardD === 6){
                     faceD = "Six of Diamonds";
@@ -237,16 +237,16 @@ $("#deal").click(function(){
                     faceD = "Seven of Diamonds";
                 }
                 else if(cardD === 8){
-                   faceD = "Eight of Diamonds";
+                   faceD = "Eight of Hearts";
                 }
                 else if(cardD === 9){
-                    faceD = "Nine of Diamonds";
+                    faceD = "Nine of Hearts";
                 }
                 else if(cardD === 10){
-                    faceD = "Ten of Diamonds";
+                    faceD = "Ten of Hearts";
                 }
                 else if(cardD === 11){
-                    faceD = "Jack of Diamonds";
+                    faceD = "Jack of Spades";
                 }
                 else if(cardD === 12){
                     faceD = "Queen of Diamonds";
@@ -422,37 +422,37 @@ $("#deal").click(function(){
     faceA = "Ace of Spades";
 }
 else if(cardA === 2){
-    faceA = "Two of Spades";
+    faceA = "Two of Hearts";
 }
 else if(cardA === 3){
-    faceA = "Three of Spades";
+    faceA = "Three of Hearts";
 }
 else if(cardA === 4){
-    faceA = "Four of Spades";
+    faceA = "Four of Hearts";
 }
 else if(cardA === 5){
-    faceA = "Five of Spades";
+    faceA = "Five of Clubs";
 }
 else if(cardA === 6){
-    faceA = "Six of Spades";
+    faceA = "Six of Clubs";
 }
 else if(cardA === 7){
     faceA = "Seven of Spades";
 }
 else if(cardA === 8){
-    faceA = "Eight of Spades";
+    faceA = "Eight of Diamonds";
 }
 else if(cardA === 9){
-    faceA = "Nine of Spades";
+    faceA = "Nine of Diamonds";
 }
 else if(cardA === 10){
     faceA = "Ten of Spades";
 }
 else if(cardA === 11){
-    faceA = "Jack of Spades";
+    faceA = "Jack of Diamonds";
 }
 else if(cardA === 12){
-    faceA = "Queen of Spades";
+    faceA = "Queen of Clubs";
 }
 else if(cardA === 13){
     faceA = "King of Spades";
@@ -463,13 +463,13 @@ else if(cardA === 13){
     faceB = "Ace of Hearts";
 }
 else if(cardB === 2){
-    faceB = "Two of Hearts";
+    faceB = "Two of Diamonds";
 }
 else if(cardB === 3){
-    faceB = "Three of Hearts";
+    faceB = "Three of Spades";
 }
 else if(cardB === 4){
-    faceB = "Four of Hearts";
+    faceB = "Four of Spades";
 }
 else if(cardB === 5){
     faceB = "Five of Hearts";
@@ -481,22 +481,22 @@ else if(cardB === 7){
     faceB = "Seven of Hearts";
 }
 else if(cardB === 8){
-    faceB = "Eight of Hearts";
+    faceB = "Eight of Clubs";
 }
 else if(cardB === 9){
-    faceB = "Nine of Hearts";
+    faceB = "Nine of Clubs";
 }
 else if(cardB === 10){
-    faceB = "Ten of Hearts";
+    faceB = "Ten of Diamonds";
 }
 else if(cardB === 11){
     faceB = "Jack of Hearts";
 }
 else if(cardB === 12){
-    faceB = "Queen of Hearts";
+    faceB = "Queen of Spades";
 }
 else if(cardB === 13){
-    faceB = "King of Hearts";
+    faceB = "King of Diamonds";
 } 
 $("#userHand").text(faceA +", "+ faceB);
 
@@ -523,4 +523,3 @@ $("#light").click(function(){
     $(".lightButtons").css("background-color", "#f2f2f2");
     $(".lightButtons").css("color", "#777777");
 });
-
