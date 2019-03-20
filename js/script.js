@@ -200,7 +200,7 @@ $("#deal").click(function(){
   //          }
 });
     if(cardA+cardB+cardC > 21){
-        $("#userScore").text(cardA+cardB+cardC +" Bust!")
+        $("#userScore").text(cardA+cardB+cardC +" Bust!");
         bust = true;
     }
         $("#hit").click(function(){
